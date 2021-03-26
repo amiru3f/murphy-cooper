@@ -1,0 +1,15 @@
+syntax = "proto3";
+option csharp_namespace = "MurphyCooper.Common";
+package test;
+
+service Test {
+    rpc Hello (TestRequest) returns (TestResponse);
+}
+
+message TestRequest {
+    string name = 1;
+}
+
+message TestResponse {
+    string message = 1;
+}
